@@ -10,6 +10,9 @@ prod:
 migrate:
 	poetry run python app/manage.py migrate
 
+collectstatic:
+	poetry run python app/manage.py collectstatic
+
 test:
 	cd app && poetry run python manage.py test
 
