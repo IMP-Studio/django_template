@@ -5,13 +5,13 @@ dev:
 	poetry run python app/manage.py runserver
 
 prod:
-	cd app && poetry run granian --interface asgi app.asgi:application 
+	cd app && DEBUG=False poetry run granian --interface asgi app.asgi:application 
 
 migrate:
 	poetry run python app/manage.py migrate
 
 collectstatic:
-	poetry run python app/manage.py collectstatic
+	poetry run python app/manage.py collectstatic --noinput
 
 test-unit:
 	cd app && poetry run python manage.py test

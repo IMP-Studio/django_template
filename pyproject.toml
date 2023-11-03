@@ -10,6 +10,7 @@ readme = "README.md"
 python = "^3.12"
 Django = "^4.2.7"
 granian = "^0.7.1"
+django-environ = "^0.11.2"
 
 
 [tool.poetry.group.dev.dependencies]
