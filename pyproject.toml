@@ -5,6 +5,7 @@ description = "Django template project."
 authors = ["IMP Studio"]
 license = "MIT"
 readme = "README.md"
+packages = [{ include = "app" }]
 
 [tool.poetry.dependencies]
 python = "^3.12"
