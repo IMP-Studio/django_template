@@ -12,7 +12,8 @@ RUN poetry build
 FROM python:3.12-alpine as runner
 WORKDIR /app
 COPY --from=builder /app/dist/*whl .
-RUN pip install *.whl
+RUN pip install *.whl --no-cache-dir
+RUN pip cache purge
 RUN rm *whl
 COPY . .
 CMD ["python", "app/manage.py", "runserver"]
