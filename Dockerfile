@@ -15,5 +15,6 @@ COPY --from=builder /app/dist/*whl .
 RUN pip install *.whl --no-cache-dir
 RUN pip cache purge
 RUN rm *whl
-COPY . .
-CMD ["python", "app/manage.py", "runserver"]
+COPY ./app .
+EXPOSE 8000
+CMD ["granian", "--host", "0.0.0.0", "--interface", "asgi", "app.asgi:application"]
