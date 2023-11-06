@@ -1,11 +1,18 @@
 # Django App Template
 
+## Tech Stack
+
+- Django
+- Granian (Rust Python Server)
+- DaisyUI (Tailwind CSS Components)
+- Docker (Containerization)
+
 ## Requirements
 
 - Python +3.12
 - Poetry +1.6.1
 - Make +3.81
-- Bun 1
+- Bun +1
 
 ## Runing on Local
 
