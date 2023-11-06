@@ -1,5 +1,7 @@
 *.pyc
 *.sqlite3
-static/
 dist/
+/static
 .env
+node_modules
+style.min.css

@@ -1,1 +1,12 @@
-This is <b>test html</b>
+{% load static %}
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="{% static 'home/css/style.min.css' %}" rel="stylesheet" />
+  </head>
+  <body>
+    <h1 class="text-green-500 text-3xl font-bold underline">Hello world!</h1>
+  </body>
+</html>

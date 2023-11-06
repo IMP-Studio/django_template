@@ -5,7 +5,15 @@ dev:
 	poetry run python app/manage.py runserver
 
 prod:
+	make tailwind
+	make collectstatic
 	cd app && DEBUG=False poetry run granian --interface asgi app.asgi:application 
+
+tailwind:
+	 bunx tailwindcss -i ./app/home/static/home/css/base.css -o ./app/home/static/home/css/style.min.css --minify
+
+tailwind-watch:
+	 bunx tailwindcss -i ./app/home/static/home/css/base.css -o ./app/home/static/home/css/style.min.css --watch
 
 migrate:
 	poetry run python app/manage.py migrate
