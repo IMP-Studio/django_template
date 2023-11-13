@@ -2,7 +2,6 @@ init:
 	poetry config virtualenvs.in-project true
 	poetry install
 	poetry shell
-	python -V
 
 dev:
 	poetry run python app/manage.py runserver
