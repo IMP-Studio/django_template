@@ -12,7 +12,7 @@ RUN poetry build
 FROM python:3.12-alpine as runner
 WORKDIR /app
 COPY --from=builder /app/dist/*whl .
-RUN pip install /app/*.whl --no-cache-dir
+RUN pip install /app/*.whl --no-cache-dir --prefer-binary
 RUN pip cache purge && rm /app/*whl
 WORKDIR /usr/local/lib/python3.12/site-packages/app/
 EXPOSE 8000
