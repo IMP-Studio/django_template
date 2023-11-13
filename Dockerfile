@@ -1,16 +1,16 @@
-FROM python:3.12-slim-bookworm as base
+FROM python:3.12-slim-bookworm AS base
 RUN python -m pip install poetry==1.6.1 --no-cache-dir
-FROM base as dependency
+FROM base AS dependency
 WORKDIR /app
 COPY pyproject.toml pyproject.toml
 COPY poetry.lock poetry.lock
 RUN poetry install --only main --no-root
-FROM dependency as builder
+FROM dependency AS builder
 WORKDIR /app
 COPY app app
 COPY README.md README.md
 RUN poetry build
-FROM python:3.12-alpine as runner
+FROM python:3.12-alpine AS runner
 RUN addgroup -S nonroot \
   && adduser -S nonroot -G nonroot
 USER nonroot
