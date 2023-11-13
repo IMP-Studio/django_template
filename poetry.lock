@@ -114,6 +114,19 @@ docs = ["furo (>=2021.8.17b43,<2021.9.dev0)", "sphinx (>=3.5.0)", "sphinx-notfou
 testing = ["coverage[toml] (>=5.0a4)", "pytest (>=4.6.11)"]
 
 [[package]]
+name = "djhtml"
+version = "3.0.6"
+description = "Django/Jinja template indenter"
+optional = false
+python-versions = "*"
+files = [
+    {file = "djhtml-3.0.6.tar.gz", hash = "sha256:abfc4d7b4730432ca6a98322fbdf8ae9d6ba254ea57ba3759a10ecb293bc57de"},
+]
+
+[package.extras]
+dev = ["nox", "pre-commit"]
+
+[[package]]
 name = "granian"
 version = "0.7.1"
 description = "A Rust HTTP server for Python applications"
@@ -648,4 +661,4 @@ anyio = ">=3.0.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "1fdd54d13b9e7e792fa9ba14106f71ac102c69319578bf5d826b77f495ee6847"
+content-hash = "f833ad7667ecbbd333faf97e187ec3d4606635ca7956624e2e3e079b4e08d55f"

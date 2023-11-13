@@ -1,4 +1,7 @@
 init:
+	bun install
+	make tailwind
+	make collectstatic
 	poetry config virtualenvs.in-project true
 	poetry install
 	poetry shell
@@ -34,3 +37,4 @@ check:
 
 format:
 	poetry run ruff format app
+	poetry run djhtml app
