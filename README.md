@@ -9,10 +9,12 @@
 
 ## Requirements
 
-- Python +3.12
-- Poetry +1.6.1
-- Make +3.81
-- Bun +1
+- Python +3 (already installed on mac or ubuntu)
+- Poetry +1.6.1 (`brew install poetry` or `sudo apt install poetry`)
+- Make +3.81 (`brew install make` or `sudo apt install make`)
+- Bun +1 (`brew tap oven-sh/bun && brew install bun`)
+
+> no need to install virtual environment or venv or conda or anything else. because `poetry` is virtual package manager with `.venv` environment. Similar to npm/pnpm/yanr as package manager and `node_modules` as virtual environment
 
 ## Runing on Local
 
