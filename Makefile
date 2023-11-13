@@ -38,3 +38,7 @@ check:
 format:
 	poetry run ruff format app
 	poetry run djhtml app
+
+update:
+	poetry update
+	bun update
