@@ -1,7 +1,6 @@
 init:
 	bun install
 	make tailwind
-	make collectstatic
 	poetry config virtualenvs.in-project true
 	poetry install
 	poetry shell
