@@ -1,12 +1,17 @@
 {% load static %}
 <!doctype html>
-<html data-theme="dark">
+<html data-theme="dark" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="{% static 'home/css/style.min.css' %}" rel="stylesheet" />
     <script src="{% static 'base/js/htmx.min.js' %}"></script>
     <script src="{% static 'base/js/alpine.min.js' %}"></script>
+    <title>{{ html_page.title | default:"Welcome Django + HTMX + DaisyUI" }}</title>
+    <meta
+      name="description"
+      content="{{ html_page.description
+               | default:"This is Django Template Project using HTMX and DaisyUI with Docker Deployment" }}" />
     {% block head %}{% endblock head %}
   </head>
   <body>

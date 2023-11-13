@@ -7,9 +7,13 @@ COPY poetry.lock poetry.lock
 RUN poetry install --only main --no-root
 FROM dependency as builder
 WORKDIR /app
-COPY . .
+COPY app app
+COPY README.md README.md
 RUN poetry build
 FROM python:3.12-alpine as runner
+RUN addgroup -S nonroot \
+  && adduser -S nonroot -G nonroot
+USER nonroot
 WORKDIR /app
 COPY --from=builder /app/dist/*whl .
 RUN pip install /app/*.whl --no-cache-dir --prefer-binary
