@@ -18,7 +18,7 @@ WORKDIR /app
 COPY --from=builder /app/dist/*whl .
 RUN pip install /app/*.whl --no-cache-dir --prefer-binary
 RUN pip cache purge && rm /app/*whl
-WORKDIR /usr/local/lib/python3.12/site-packages/app/
+WORKDIR /home/nonroot/.local/lib/python3.12/site-packages/app/
 EXPOSE 8000
 ENV DEBUG=False
-CMD ["granian", "--host", "0.0.0.0", "--interface", "asgi", "app.asgi:application"]
+CMD ["python", "-m", "granian", "--host", "0.0.0.0", "--interface", "asgi", "app.asgi:application"]
