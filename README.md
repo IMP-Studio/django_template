@@ -19,6 +19,8 @@
 ## Runing on Local
 
 ```bash
+# Copy .env.example to .env and modify it
+cp .env.example .env
 # install dependencies
 make
 # run migrations
