@@ -10,7 +10,7 @@
 ## Requirements
 
 - Python +3 (already installed on mac or ubuntu)
-- Poetry +1.6.1 (`brew install poetry` or `sudo apt install poetry`)
+- Poetry +1.7 (`brew install poetry` or `sudo apt install poetry`)
 - Make +3.81 (`brew install make` or `sudo apt install make`)
 - Bun +1 (`brew tap oven-sh/bun && brew install bun`)
 
