@@ -3,9 +3,12 @@
 dist/
 /static
 .env
+temp_auto_push.bat
 node_modules
 style.min.css
 .scannerwork
 .nix-shell
 .venv
 dump.rdb
+.gitignore
+branch_structure.json
